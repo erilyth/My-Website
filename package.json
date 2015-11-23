@@ -8,11 +8,11 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
+    "gulp-jasmine": "^2.2.1",
+    "gulp-jasmine-browser": "^0.2.3",
     "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.0.3",
-    "gulp-util": "^3.0.6"
+    "gulp-watch": "^4.3.5",
+    "phantomjs": "^1.9.18"
   },
   "author": "Batchu Venkat Vishal",
   "license": "ISC"
