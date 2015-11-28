@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <html ng-app>
+ <html ng-app="myApp">
 	<head>
         <meta charset="utf-8" />
 		<title>index</title>
@@ -10,12 +10,13 @@
 		<link rel="stylesheet" href="bootstrap-theme.min.css">
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" ng-controller="AppCtrl">
 			<input ng-model="test">
 			{{test}}
 			<h1>HELLO!!!</h1>
 		</div>
 		<!-- AngularJS library -->
 		<script src="angular.min.js"></script>
+		<script src="controllers/controller.js"></script>
 	</body>
 </html>
