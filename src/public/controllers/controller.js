@@ -9,4 +9,8 @@ var myApp=angular.module('myApp',[]);
 myApp.controller('AppCtrl',['$scope','$http',
 function($scope,$http) {
 	console.log("CONTROLLER WORKS");
+	$http.get('/contactlist').success(function(response) { //Send a get request to the server to get the data.
+		console.log("I got the data requested");
+		$scope.contactList=response; //Put the data on the global scope so the views can display them.
+	});
 }]);
