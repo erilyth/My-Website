@@ -17,12 +17,12 @@ app.get('/instructables', function(reqest, response){
 	process.stdout.on('data',function(data){
 		console.log(data.toString('utf8'));
 		namesList = data.toString('utf8').split(/\r?\n/)
-		console.log(namesList);
 		for (var i=0;i<namesList.length;i++){
 			if (namesList[i]!="")
 			{
 				instructable={
-					name: namesList[i]
+					name: namesList[i].split(',')[1],
+					url: namesList[i].split(',')[0]
 				}
 				instructableList.push(instructable);
 			}
@@ -32,22 +32,6 @@ app.get('/instructables', function(reqest, response){
 		console.log(instructableList);
 		response.json(instructableList);
 	});
-});
-
-
-app.get('/contactlist', function (request,response) { //Creating a new route 'contactlist'
-	console.log("I recieved a get request");
-	person1={
-		name: 'Vishal'
-	}
-	person2={
-		name: 'Erilyth'
-	}
-	person3={
-		name: 'Harsha'
-	}
-	var contactList=[person1,person2,person3];
-	response.json(contactList); //Whatever calls for data using this get request (using the route 'contactlist') will get this response back.
 });
 
 app.listen(3000);
