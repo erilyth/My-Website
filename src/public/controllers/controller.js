@@ -5,7 +5,7 @@
  * Distributed under terms of the MIT license.
  */
 
-var myApp=angular.module('myApp',[]);
+var myApp=angular.module('myApp',['app.directives.project']);
 myApp.controller('AppCtrl',['$scope','$http',
 function($scope,$http) {
 	console.log("CONTROLLER WORKS");

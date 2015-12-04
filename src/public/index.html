@@ -13,22 +13,15 @@
 		<div class="container" ng-controller="AppCtrl">
 			<input ng-model="test">
 			{{test}}
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Name</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="instructable in instructableList">
-						<td><a href={{instructable.url}}>{{instructable.name}}</a></td>
-					</tr>
-				</tbody>
-			</table>
+			<br>
+			<div ng-repeat="instructable in instructableList" style="display:inline-block; margin:20px;">
+				<project projectdata="instructable"></project>
+			</div>
 			<h1>HELLO!!!</h1>
 		</div>
 		<!-- AngularJS library -->
 		<script src="angular.min.js"></script>
+		<script src="directives/project.js"></script>		
 		<script src="controllers/controller.js"></script>
 	</body>
 </html>

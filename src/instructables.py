@@ -17,11 +17,12 @@ html=urllib2.urlopen("http://www.instructables.com/member/vishalapr/?show=INSTRU
 
 soup=BS(html)
 elems = soup.select('div#omni div.container div#member-content div#member-centercontent div.sortable-box div.projects ul.h-list li div.member-cover-item div.cover-info span.title a')
+elemimages = soup.select('div#omni div.container div#member-content div#member-centercontent div.sortable-box div.projects ul.h-list li div.member-cover-item a.cover-image img')
 
 cnt=0
-for elem in elems:
+for elem in range(len(elems)):
     if cnt<12:
-        print "http://www.instructables.com"+elem['href']+","+elem.text
+        print elemimages[elem]['src']+","+"http://www.instructables.com"+elems[elem]['href']+","+elems[elem].text
     cnt+=1
 
 sys.stdout.flush()

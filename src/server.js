@@ -15,14 +15,14 @@ app.get('/instructables', function(reqest, response){
 	var process = spawn('python',["./instructables.py"]);
 	var instructableList = [];
 	process.stdout.on('data',function(data){
-		console.log(data.toString('utf8'));
 		namesList = data.toString('utf8').split(/\r?\n/)
 		for (var i=0;i<namesList.length;i++){
 			if (namesList[i]!="")
 			{
 				instructable={
-					name: namesList[i].split(',')[1],
-					url: namesList[i].split(',')[0]
+					name: namesList[i].split(',')[2],
+					url: namesList[i].split(',')[1],
+					image: namesList[i].split(',')[0],
 				}
 				instructableList.push(instructable);
 			}
