@@ -7,8 +7,11 @@ angular.module('app.directives.project', [])
 				projectdata: '='
 			},
 			templateUrl: "templates/directives/project.html",
+			replace: true,
 			controller: function($scope){
 				console.log($scope.projectdata);
 			}
 		};
 	});
+
+//Use link to do DOM related modifications
