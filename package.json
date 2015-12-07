@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "gulp": "gulp jasmine-phantom",
-    "test": "testscripts/gulp.sh"
+    "test": "testscripts/gulp.sh",
+    "start": "node src/server.js"
   },
   "repository": {
     "url": "https://github.com/erilyth/My-Website.git"
