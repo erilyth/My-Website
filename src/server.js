@@ -7,32 +7,48 @@
 
 var express = require('express');
 var app = express();
+var request = require('request');
+var cheerio = require('cheerio');
 
 app.use(express.static(__dirname+"/public"));
 
-app.get('/instructables', function(reqest, response){
-	var spawn = require('child_process').spawn;
-	var process = spawn('python',["./instructables.py"]);
+
+app.get('/instructables', function(req, res){
+	url = "http://www.instructables.com/member/vishalapr/?show=INSTRUCTABLES&limit=100&sort=FEATURED";
 	var instructableList = [];
-	process.stdout.on('data',function(data){
-		namesList = data.toString('utf8').split(/\r?\n/)
-		for (var i=0;i<namesList.length;i++){
-			if (namesList[i]!="")
-			{
-				instructable={
-					name: namesList[i].split(',')[2],
-					url: namesList[i].split(',')[1],
-					image: namesList[i].split(',')[0],
+	var names = [];
+	var urls = [];
+	var images = [];
+	var proxiedRequest = request.defaults({'proxy': 'http://proxy.iiit.ac.in:8080'});
+	proxiedRequest(url, function (error, response, html) {
+  		if (!error) {
+    			var $ = cheerio.load(html);
+   			var dataM = $('div#omni div.container div#member-content div#member-centercontent div.sortable-box div.projects ul.h-list li div.member-cover-item div.cover-info span.title a');
+			dataM.each(function(i, element){
+      				console.log($(this).text());
+				console.log("http://www.instructables.com"+$(this).attr('href'));
+				names.push($(this).text());
+				urls.push("http://www.instructables.com"+$(this).attr('href'));
+    			});
+			var dataM2 = $('div#omni div.container div#member-content div#member-centercontent div.sortable-box div.projects ul.h-list li div.member-cover-item a.cover-image img');
+			dataM2.each(function(i, element){
+				console.log($(this).attr('src'));
+				images.push($(this).attr('src'));
+			});
+			for(i=0;i<12;i++){
+				var instructable = {
+					name: names[i],
+					url: urls[i],
+					image: images[i]
 				}
+				console.log(instructable);
 				instructableList.push(instructable);
 			}
-		}
-	});
-	process.stdout.on('close', function( ){
-		console.log(instructableList);
-		response.json(instructableList);
+			res.json(instructableList);
+  		}
 	});
 });
+
 
 app.listen(8080);
 console.log("Server running on port 8080");
