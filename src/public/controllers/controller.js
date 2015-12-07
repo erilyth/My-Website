@@ -5,8 +5,8 @@
  * Distributed under terms of the MIT license.
  */
 
-var myApp=angular.module('myApp',['app.directives.project']);
-myApp.controller('AppCtrl',['$scope','$http',
+var myApp=angular.module('instructablesApp',['app.directives.project']);
+myApp.controller('instructablesCtrl',['$scope','$http',
 function($scope,$http) {
 	console.log("CONTROLLER WORKS");
 	$http.get('/instructables').success(function(response) { //Send a get request to the server to get the data.
