@@ -19,7 +19,13 @@ app.get('/instructables', function(req, res){
 	var names = [];
 	var urls = [];
 	var images = [];
-	var proxiedRequest = request.defaults({'proxy': 'http://proxy.iiit.ac.in:8080'});
+	var isProxy=0;
+	var proxiedRequest = request.defaults({});
+	request(url, function (error, response, html) {
+		if(error){
+			proxiedRequest = request.defaults({proxy:'http://www.proxy.iiit.ac.in:8080'});
+		}
+	});
 	proxiedRequest(url, function (error, response, html) {
   		if (!error) {
     			var $ = cheerio.load(html);
