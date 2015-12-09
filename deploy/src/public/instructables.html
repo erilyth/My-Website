@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ <html ng-app="instructablesApp">
+	<head>
+        <meta charset="utf-8" />
+		<title>index</title>
+		<!-- jQuery library -->
+		<script src="jquery-1.11.3.min.js"></script>
+		<!-- Bootstrap.css -->
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap-theme.min.css">
+	</head>
+	<body>
+		<div class="container" ng-controller="instructablesCtrl">
+			<input ng-model="test">
+			{{test}}
+			<br>
+			<div ng-repeat="instructable in instructableList" style="display:inline-block; margin:20px;">
+				<project projectdata="instructable"></project>
+			</div>
+			<h1>HELLO!!!</h1>
+		</div>
+		<!-- AngularJS library -->
+		<script src="angular.min.js"></script>
+		
+		<script src="directives/project.js"></script>		
+		<script src="controllers/controller.js"></script>
+	</body>
+</html>
