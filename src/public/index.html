@@ -8,13 +8,25 @@
 		<!-- Bootstrap.css -->
 		<link rel="stylesheet" href="bootstrap.min.css">
 		<link rel="stylesheet" href="bootstrap-theme.min.css">
+        <!-- Custom stylesheets -->
+        <link rel="stylesheet" href="menu.css">
 	</head>
 	<body>
-		<a href="instructables.html">Instructables</a>
-		<a href="http://vishalbatchu.blog.com/">Blog</a>
+        <div class="menuContainer" ng-controller="menuCtrl">
+            <img src="test.svg" height="30px" class="menuButton" onclick="updateMenuItems()"/>
+            <a href="instructables.html">
+                <img src="test.svg" height="30px" class="menuIcon"/>               </a>
+            <a href="http://vishalbatchu.blog.com/">
+                <img src="test.svg" height="30px" class="menuIcon"/>               </a>
+            <img src="test.svg" height="30px" class="menuIcon"/>
+            <img src="test.svg" height="30px" class="menuIcon"/>
+            <img src="test.svg" height="30px" class="menuIcon"/>
+            <img src="test.svg" height="30px" class="menuIcon"/>
+        </div>
 		<!-- AngularJS library -->
 		<script src="angular.min.js"></script>
 		<script src="directives/project.js"></script>		
 		<script src="controllers/controller.js"></script>
+        <script src="menu.js"></script>
 	</body>
 </html>
