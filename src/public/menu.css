@@ -6,20 +6,50 @@ img.mainTitle {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding-left: 7em;
 }
 
 img.menuButton {
     position:absolute; 
-    top:50%; 
+    top:60%; 
     left: 50%; 
     z-index: 5;
 }
 
 img.menuIcon {
     position:absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
+}
+
+.changeText span {
+    opacity: 0;
+    font-size: 5em;
+    padding-left: 0.3em;
+    margin-top: -1em;
+    overflow: hidden;
+    position: absolute;
+    color: #6b889d;
+    animation: rotateWord 9s linear infinite 0s;
+}
+
+.changeText span:nth-child(1) {
+    animation-delay: 0s;
+}
+.changeText span:nth-child(2) {
+    animation-delay: 3s;
+}
+.changeText span:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; transform: translateY(-30px); transform: translateY(-30px); }
+	5% { opacity: 1; transform: translateY(0px); transform: translateY(0px);}
+    30% { opacity: 1; transform: translateY(0px); transform: translateY(0px); }
+	33% { opacity: 0; ransform: translateY(30px); transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 headingText {

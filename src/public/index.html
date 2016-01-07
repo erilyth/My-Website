@@ -12,13 +12,24 @@
         <link rel="stylesheet" href="menu.css">
 	</head>
 	<body>
-        <img class="mainTitle" src="Images/title.svg" />
+        <div style="position: absolute; padding-left: 33%;">
+            <img class="mainTitle" src="Images/title.svg" />
+            <br /><br />
+            <div style="display:inline-block;font-size:4em;padding-left: 1em;">I like to</div>
+            <div style="display:inline-block;" class="changeText">
+                <span>Code</span>
+                <span>Game</span>
+                <span>Eat</span>
+            </div>
+        </div>
         <div class="menuContainer" ng-controller="menuCtrl">
             <img src="Images/test.svg" height="30px" class="menuButton" onclick="updateMenuItems()"/>
             <a href="instructables.html">
-                <img src="Images/test.svg" height="30px" class="menuIcon"/>               </a>
+                <img src="Images/test.svg" height="30px" class="menuIcon"/>
+            </a>
             <a href="http://vishalbatchu.blog.com/">
-                <img src="Images/test.svg" height="30px" class="menuIcon"/>               </a>
+                <img src="Images/test.svg" height="30px" class="menuIcon"/>
+            </a>
             <img src="Images/test.svg" height="30px" class="menuIcon"/>
             <img src="Images/test.svg" height="30px" class="menuIcon"/>
             <img src="Images/test.svg" height="30px" class="menuIcon"/>

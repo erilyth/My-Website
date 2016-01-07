@@ -9,8 +9,8 @@
 		fill: white;
     	font-family: 'Share Tech Mono', sans-serif;
         text-align: center;
-        font-size: 80px;
-        font-weight: bold;
+        font-size: 70px;
+
         text-shadow: 0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
                0 3px 0 #bbb,
@@ -106,6 +106,6 @@
 	</defs>
 
 <g>
-	<text x="0" y="95">About Moi!</text>
+	<text x="0" y="95">Vishal Batchu</text>
 </g>
 </svg>

@@ -10,7 +10,7 @@ function updateMenuItems() {
         imgs.each(function(){
             $(this).css({
                 'display': 'block',
-                'top': '50%',
+                'top': '60%',
                 'left': '50%'
             })
             var height = $(this).height();
