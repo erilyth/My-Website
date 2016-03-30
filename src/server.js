@@ -12,6 +12,12 @@ var cheerio = require('cheerio');
 
 app.use(express.static(__dirname+"/public"));
 
+app.get('/myprojects', function(req, res){
+	var projectList = [];
+	var project = {name:'test', url:'https://www.google.com', image:'images/instructables.png', description:'Description'};
+	projectList.push(project);
+	res.json(projectList);
+});
 
 app.get('/instructables', function(req, res){
 	url = "http://www.instructables.com/member/vishalapr/?show=INSTRUCTABLES&limit=100&sort=FEATURED";
@@ -28,14 +34,14 @@ app.get('/instructables', function(req, res){
 	});
 	proxiedRequest(url, function (error, response, html) {
   		if (!error) {
-    			var $ = cheerio.load(html);
+    		var $ = cheerio.load(html);
    			var dataM = $('div#omni div.container div#member-content div#member-centercontent div.sortable-box div.projects ul.h-list li div.member-cover-item div.cover-info span.title a');
 			dataM.each(function(i, element){
-      				console.log($(this).text());
+      			console.log($(this).text());
 				console.log("http://www.instructables.com"+$(this).attr('href'));
 				names.push($(this).text());
 				urls.push("http://www.instructables.com"+$(this).attr('href'));
-    			});
+    		});
 			var dataM2 = $('div#omni div.container div#member-content div#member-centercontent div.sortable-box div.projects ul.h-list li div.member-cover-item a.cover-image img');
 			dataM2.each(function(i, element){
 				console.log($(this).attr('src'));

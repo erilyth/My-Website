@@ -1,4 +1,4 @@
-//The <project data=""></project> directive used for displaying projects 
+//The <project projectdata=""></project> directive used for displaying projects 
 angular.module('app.directives.project', [])
 	.directive('project', function(){
 		return {

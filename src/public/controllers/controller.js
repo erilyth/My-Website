@@ -16,6 +16,17 @@ function($scope,$http) {
 	});
 }]);
 
+var myApp2 = angular.module('projectsApp',['app.directives.projectdetail']);
+
+myApp2.controller('projectsCtrl',['$scope','$http',
+function($scope,$http) {
+    console.log("CONTROLLER 2 WORKS");
+    $http.get('/myprojects').success(function(response) { //Send a get request to the server to get the data.
+        console.log("I got the data requested 2");
+        $scope.projectList=response; //Put the data on the global scope so the views can display them.
+    });
+}]);
+
 var homeApp=angular.module('homeApp',[]);
 
 homeApp.controller('menuCtrl',['$scope','$http',
