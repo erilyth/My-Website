@@ -15,7 +15,9 @@ app.use(express.static(__dirname+"/public"));
 app.get('/myprojects', function(req, res){
 	var projectList = [];
 	var project = {name:'test', url:'https://www.google.com', image:'images/instructables.png', description:'Description'};
+	var project2 = {name:'test', url:'https://www.google.com', image:'images/instructables.png', description:'Description'};
 	projectList.push(project);
+	projectList.push(project2);
 	res.json(projectList);
 });
 
