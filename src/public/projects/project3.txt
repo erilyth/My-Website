@@ -1,0 +1,7 @@
+Survival Game (OpenGL)
+%$
+https://github.com/erilyth/OpenGL-3D
+%$
+https://wiki.sugarlabs.org/images/thumb/d/d2/Adventure1-vishal.png/800px-Adventure1-vishal.png
+%$
+A survival game with traps and holes around the map which hurt you. Collect as many coins as you can and try complete the level without dying. Night mode and a few interesting cameras provided are fun to play around with.

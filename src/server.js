@@ -28,7 +28,6 @@ app.get('/myprojects', function(req, res){
     	}
     	for(var filex in filesList){
 			var fileName = filesList[filex];
-			console.log(filex);
 			fs.readFile(fileName, {encoding: 'utf-8'}, function(err,data){
 			    if (!err){
 			   		var name = data.split('%$')[0];

@@ -1,0 +1,8 @@
+Cannon Game (OpenGL)
+%$
+https://github.com/erilyth/OpenGL-C-
+%$
+https://wiki.sugarlabs.org/images/3/37/Cannongame-vishal.png
+%$
+A 2D cannon shooter game, you have to shoot down pigs and get points for it. 
+Coins, switches etc are present throught the level and you can collect them to earn more points.

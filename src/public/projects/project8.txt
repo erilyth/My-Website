@@ -1,0 +1,8 @@
+File Sharing Client
+%$
+https://github.com/Achilles-96/File-sharing-client
+%$
+http://i.imgur.com/jtGZ7th.png
+%$
+A file sharing protocol where a client communicates with a server.
+TCP and UDP communication protocols are used to get file listings, download files and check for file integrity.

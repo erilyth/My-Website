@@ -1,0 +1,8 @@
+Carrom Game (WebGL)
+%$
+https://github.com/erilyth/Carrom-WebGL/
+%$
+http://i.imgur.com/sMgEFij.png
+%$
+A carrom game with a few interesting view modes. 
+Unlike a standard carrom game, this features a 9 coin game where speed is also taken into consideration.

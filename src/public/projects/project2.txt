@@ -1,9 +1,8 @@
-Title
+Trendspace (A shopping website)
 %$
-URL
+https://trendspace.pythonanywhere.com/
 %$
-Image
+http://i.imgur.com/pi18w0C.png
 %$
-Description
-Hooray
-It might just work.
+A shopping website prototype. It has all the basic features of a shopping website such as, search, user accounts, cart, purchase history, wishlists, forum, feedback section, seller space etc.
+Developed using the Web2Py framework

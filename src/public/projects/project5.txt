@@ -1,0 +1,8 @@
+Tangram (Block Puzzle version)
+%$
+https://github.com/erilyth/Tangram-Game
+%$
+https://wiki.sugarlabs.org/images/thumb/1/16/Tangram2.jpg/800px-Tangram2.jpg
+%$
+A mobile version of the famous Tangram game where we need to put pieces together to recreate the original shape.
+Developed using Cocos2D-JS framework, based on JavaScript.

@@ -1,0 +1,8 @@
+Box Stacking Game (Unity)
+%$
+https://github.com/erilyth/Box-Stacking-Game
+%$
+https://wiki.sugarlabs.org/images/thumb/e/e0/BoxStacking.png/800px-BoxStacking.png
+%$
+A game where boxes are flung from the two sides of the screen and we need to stack them on top of each other.
+Developed when I was learning the basics of game development using 	Unity, a long time ago.

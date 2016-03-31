@@ -1,0 +1,8 @@
+House Model (Blender)
+%$
+https://github.com/erilyth/HouseModel-Blender
+%$
+http://i.imgur.com/BtHOWYo.png
+%$
+A model of a 2-storey modern house.
+Texturing is not done yet, I am working on it.
