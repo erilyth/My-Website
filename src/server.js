@@ -9,18 +9,37 @@ var express = require('express');
 var app = express();
 var request = require('request');
 var cheerio = require('cheerio');
+var fs = require('fs');
+var path = require('path');
 
 app.use(express.static(__dirname+"/public"));
 
+//Read projects from the projects directory
 app.get('/myprojects', function(req, res){
 	var projectList = [];
-	var project = {name:'test', url:'https://www.google.com', image:'images/instructables.png', description:'Description'};
-	var project2 = {name:'test', url:'https://www.google.com', image:'images/instructables.png', description:'Description'};
-	projectList.push(project);
-	projectList.push(project2);
-	res.json(projectList);
+	var filePath = path.join(__dirname, 'public/projects/project1.txt');
+	var filesList = [filePath];
+	for(var file in filesList){
+		var fileName = filesList[file];
+		fs.readFile(fileName, {encoding: 'utf-8'}, function(err,data){
+		    if (!err){
+		   		var name = data.split('%$')[0];
+		   		var url = data.split('%$')[1];
+		   		var image = data.split('%$')[2];
+		   		var description = data.split('%$')[3];
+		    	var project = {name:name, url:url, image:image, description:description};
+		    	projectList.push(project);
+		    	if(file == filesList.length-1){
+		    		res.json(projectList);
+		    	}
+		    }else{
+		        console.log(err);
+		    }
+		});
+	}
 });
 
+//Read from the instructables site
 app.get('/instructables', function(req, res){
 	url = "http://www.instructables.com/member/vishalapr/?show=INSTRUCTABLES&limit=100&sort=FEATURED";
 	var instructableList = [];

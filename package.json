@@ -20,7 +20,9 @@
     "gulp-watch": "^4.3.5",
     "phantomjs": "^1.9.18",
     "request": "latest",
-    "cheerio": "latest"
+    "cheerio": "latest",
+    "fs": "latest",
+    "path": "latest"
   },
   "devDependencies": {
     "express": "^4.13.3",
@@ -31,7 +33,9 @@
     "gulp-watch": "^4.3.5",
     "phantomjs": "^1.9.18",
     "request": "latest",
-    "cheerio": "latest"
+    "cheerio": "latest",
+    "fs": "latest",
+    "path": "latest"
   },
   "author": "Batchu Venkat Vishal",
   "license": "ISC"
