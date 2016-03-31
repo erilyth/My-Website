@@ -1,20 +1,30 @@
 .heading {
-	color:white;
-	padding:2%;
-	background-color:#0073e6;
-	text-align:center;
-	font-size:6em;
+	color: white;
+	padding: 2%;
+	background-color: #0073e6;
+	text-align: center;
+	font-size: 6em;
 }
 
 .subheading {
-	color:white;
-	padding:2%;
-	background-color:#66b3ff;
-	text-align:center;
-	font-size:3em;
+	color: white;
+	padding: 2%;
+	background-color: #66b3ff;
+	text-align: center;
+	font-size: 3em;
 }
 
 .boundary {
-	background-color:#1a8cff;
-	height:15px;
+	background-color: #1a8cff;
+	height: 15px;
+}
+
+.round-back-button {
+	position: absolute;
+	background-color: #1A8CFF;
+	left: 5%;
+	width: 60px;
+	height: 60px;
+	border: 4px solid white;
+	border-radius: 20px;
 }

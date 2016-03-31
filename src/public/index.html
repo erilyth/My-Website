@@ -1,47 +1,51 @@
+
+
 <!DOCTYPE html>
- <html ng-app="homeApp">
+<html ng-app="homeApp">
 	<head>
-        <meta charset="utf-8" />
+		<meta charset="utf-8" />
 		<title>index</title>
 		<!-- jQuery library -->
 		<script src="jquery-1.11.3.min.js"></script>
 		<!-- Bootstrap.css -->
 		<link rel="stylesheet" href="bootstrap.min.css">
 		<link rel="stylesheet" href="bootstrap-theme.min.css">
-        <!-- Custom stylesheets -->
-        <link rel="stylesheet" href="menu.css">
-        <link rel="stylesheet" href="main.css">
+		<!-- Custom stylesheets -->
+		<link rel="stylesheet" href="menu.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
-        <div class="heading">Vishal Batchu</div>
-        <div class="boundary"></div>
-        <div class="subheading" style="margin-left:-14%;font-size:1em;color:grey;">
-            <div style="display:inline-block;font-size:3em;padding-left:1em;">I like to</div>
-            <div style="display:inline-block;" class="changeText">
-                <span>Code</span>
-                <span>Game</span>
-                <span>Eat</span>
-            </div>
-        </div>
-        <div class="menuContainer" ng-controller="menuCtrl">
-            <img id="mainbutton" src="Images/menubutton.png" src="" style="top:70%; left:50%" height="60px" class="menuButton" onclick="updateMenuItems()"/>
-            <a href="instructables.html">
-                <img src="Images/instructables.png" height="24px" class="menuIcon"/>
-            </a>
-            <a href="http://vishalbatchu.blog.com/">
-                <img src="Images/blog.png" height="30px" class="menuIcon"/>
-            </a>
-            <a href="https://github.com/erilyth">
-            	<img src="Images/github.png" height="30px" class="menuIcon"/>
-            </a>
-            <a href="myprojects.html">
-                <img src="Images/projects.png" height="30px" class="menuIcon"/>
-            </a>
-        </div>
+		<div class="heading">Vishal Batchu</div>
+		<div class="boundary"></div>
+		<div class="subheading" style="margin-left:-14%;font-size:1em;color:grey;">
+			<div style="display:inline-block;font-size:3em;padding-left:1em;">I like to</div>
+			<div style="display:inline-block;" class="changeText">
+				<span>Code</span>
+				<span>Game</span>
+				<span>Eat</span>
+			</div>
+		</div>
+		<div class="menuContainer" ng-controller="menuCtrl">
+			<img id="mainbutton" src="Images/menubutton.png" src="" style="top:70%; left:50%" height="60px" class="menuButton" onclick="updateMenuItems()"/>
+			<a href="instructables.html">
+			<img src="Images/instructables.png" height="24px" class="menuIcon"/>
+			</a>
+			<a href="http://vishalbatchu.blog.com/">
+			<img src="Images/blog.png" height="30px" class="menuIcon"/>
+			</a>
+			<a href="https://github.com/erilyth">
+			<img src="Images/github.png" height="30px" class="menuIcon"/>
+			</a>
+			<a href="myprojects.html">
+			<img src="Images/projects.png" height="30px" class="menuIcon"/>
+			</a>
+		</div>
 		<!-- AngularJS library -->
 		<script src="angular.min.js"></script>
 		<script src="directives/project.js"></script>		
 		<script src="controllers/controller.js"></script>
-        <script src="menu.js"></script>
+		<script src="menu.js"></script>
 	</body>
 </html>
+
+
