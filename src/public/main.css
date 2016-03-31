@@ -1,9 +1,30 @@
+@font-face {
+    font-family: Choplin-ExtraLight;
+    src: url(fonts/Choplin-ExtraLight-DEMO.otf);
+}
+
+@font-face {
+    font-family: Harabara;
+    src: url(fonts/Harabara.otf);
+}
+
+@font-face {
+    font-family: FortuneCity;
+    src: url(fonts/FortuneCity.ttf);
+}
+
+body{
+	font-family: Choplin-ExtraLight;
+}
+
 .heading {
 	color: white;
 	padding: 2%;
 	background-color: #0073e6;
 	text-align: center;
 	font-size: 6em;
+	font-family: Harabara;
+	text-shadow: 2px 2px 2px #555555;
 }
 
 .subheading {
@@ -11,7 +32,9 @@
 	padding: 2%;
 	background-color: #66b3ff;
 	text-align: center;
-	font-size: 3em;
+	font-size: 4.5em;
+	font-family: FortuneCity;
+	text-shadow: 1px 1px 1px #aaaaaa;
 }
 
 .boundary {
