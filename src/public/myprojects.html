@@ -1,7 +1,7 @@
 <!DOCTYPE html>
- <html ng-app="projectsApp">
+<html ng-app="projectsApp">
 	<head>
-        <meta charset="utf-8" />
+		<meta charset="utf-8" />
 		<title>My Projects</title>
 		<!-- jQuery library -->
 		<script src="jquery-1.11.3.min.js"></script>
@@ -11,7 +11,10 @@
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
-		<div class="subheading">Projects</div>
+		<div class="subheading">
+			<a href="index.html"><img src="Images/back.png" class="round-back-button"></a>
+			Projects
+		</div>
 		<div class="boundary"></div>
 		<div class="container" ng-controller="projectsCtrl">
 			<div ng-repeat="project in projectList" style="margin:4%;margin-left:5%;">
@@ -20,8 +23,9 @@
 		</div>
 		<!-- AngularJS library -->
 		<script src="angular.min.js"></script>
-		
-		<script src="directives/projectdetail.js"></script>		
+		<script src="directives/projectdetail.js"></script>
 		<script src="controllers/controller.js"></script>
 	</body>
 </html>
+
+

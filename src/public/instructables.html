@@ -1,7 +1,7 @@
 <!DOCTYPE html>
- <html ng-app="instructablesApp">
+<html ng-app="instructablesApp">
 	<head>
-        <meta charset="utf-8" />
+		<meta charset="utf-8" />
 		<title>My Instructables</title>
 		<!-- jQuery library -->
 		<script src="jquery-1.11.3.min.js"></script>
@@ -11,17 +11,21 @@
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
-		<div class="subheading">Instructables</div>
+		<div class="subheading">
+			<a href="index.html"><img src="Images/back.png" class="round-back-button"></a>
+			Instructables
+		</div>
 		<div class="boundary"></div>
-		<div class="container" ng-controller="instructablesCtrl" style="margin-left:10%;">
+		<div class="container" ng-controller="instructablesCtrl">
 			<div ng-repeat="instructable in instructableList" style="display:inline-block; margin:2%;">
 				<project projectdata="instructable"></project>
 			</div>
 		</div>
 		<!-- AngularJS library -->
 		<script src="angular.min.js"></script>
-		
-		<script src="directives/project.js"></script>		
+		<script src="directives/project.js"></script>
 		<script src="controllers/controller.js"></script>
 	</body>
 </html>
+
+
