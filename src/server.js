@@ -17,26 +17,36 @@ app.use(express.static(__dirname+"/public"));
 //Read projects from the projects directory
 app.get('/myprojects', function(req, res){
 	var projectList = [];
-	var filePath = path.join(__dirname, 'public/projects/project1.txt');
-	var filesList = [filePath];
-	for(var file in filesList){
-		var fileName = filesList[file];
-		fs.readFile(fileName, {encoding: 'utf-8'}, function(err,data){
-		    if (!err){
-		   		var name = data.split('%$')[0];
-		   		var url = data.split('%$')[1];
-		   		var image = data.split('%$')[2];
-		   		var description = data.split('%$')[3];
-		    	var project = {name:name, url:url, image:image, description:description};
-		    	projectList.push(project);
-		    	if(file == filesList.length-1){
-		    		res.json(projectList);
-		    	}
-		    }else{
-		        console.log(err);
-		    }
-		});
-	}
+	var filesRead = 0;
+	var filesList = [];
+	fs.readdir(__dirname+"/public/projects/", function(err, filenames){
+		console.log(filenames);
+		for (var i=0; i<filenames.length; i++) {
+        	var filePath = path.join(__dirname+"/public/projects/", filenames[i]);
+    		filesList.push(filePath);
+    		console.log(filePath);
+    	}
+    	for(var filex in filesList){
+			var fileName = filesList[filex];
+			console.log(filex);
+			fs.readFile(fileName, {encoding: 'utf-8'}, function(err,data){
+			    if (!err){
+			   		var name = data.split('%$')[0];
+			   		var url = data.split('%$')[1];
+			   		var image = data.split('%$')[2];
+			   		var description = data.split('%$')[3];
+			    	var project = {name:name, url:url, image:image, description:description};
+			    	projectList.push(project);
+			    	filesRead += 1;
+			    	if(filesRead == filesList.length){
+			    		res.json(projectList);
+			    	}
+			    }else{
+			        console.log(err);
+			    }
+			});
+		}
+	});
 });
 
 //Read from the instructables site
