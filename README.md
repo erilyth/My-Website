@@ -2,7 +2,7 @@
 
 A website entirely about me!
 
-This website serves the purpose to let the world know a little more about **me** and what I like to do.
+This website serves the purpose of letting the world know a little more about **me** and what I like to do.
 
 * * * * *
 
