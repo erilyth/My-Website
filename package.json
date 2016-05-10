@@ -4,7 +4,6 @@
   "description": "A simple website to let the world know who I am",
   "main": "src/server.js",
   "scripts": {
-    "gulp": "gulp jasmine-phantom",
     "test": "testscripts/gulp.sh",
     "start": "node src/server.js"
   },
