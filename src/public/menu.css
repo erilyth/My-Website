@@ -2,23 +2,47 @@ body {
     background-color: #cce5ff;
 }
 
+div.content {
+  margin-left: 110px;
+  margin-top: 3%;
+}
+
 img.mainTitle {
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
+#menucontainer {
+    position: fixed;
+    border-radius: 10px;
+    top: 60%;
+    background-color: #A8B7BF;
+    height: 64px;
+    width: 70px;
+    margin-left: 8px;
+    margin-top: -70px;
+    box-shadow: 5px 3px 2px #455A64;
+}
+
+#menucontainer.sticky {
+    top: 40%;
+}
+
 img.menuButton {
-    position:absolute; 
-    top:60%; 
-    left: 50%; 
+    position:fixed; 
+    top:50%;
+    left: 15px;
     z-index: 5;
 }
 
+img.menuButton.sticky {
+    top: 30%;
+}
+
 img.menuIcon {
-    position:absolute;
-    top: 60%;
-    left: 50%;
+    position:fixed;
+    top: 53%;
 }
 
 .changeText span {

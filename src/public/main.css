@@ -17,6 +17,13 @@ body{
 	font-family: Choplin-ExtraLight;
 }
 
+/* This sticky class is added onto the header after scroll */
+.heading.sticky {
+	font-size: 1em;
+	position: fixed;
+	width: 100%;
+}
+
 .heading {
 	color: white;
 	padding: 2%;
@@ -25,6 +32,19 @@ body{
 	font-size: 6em;
 	font-family: Harabara;
 	text-shadow: 2px 2px 2px #555555;
+}
+
+/* This sticky class is added onto the subheading after scroll */
+.subheading.sticky {
+	display: none;
+}
+
+.subheadingcontent.sticky {
+	display: none;
+}
+
+.subheadingcontent {
+	display: inline-block;
 }
 
 .subheading {

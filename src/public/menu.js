@@ -1,7 +1,8 @@
 var menuState = 0;
 var noSizeChange = 0;
+var scrollState = 0;
 
-$( window ).resize(function() {
+$(window).resize(function() {
     if(menuState == 0){
         noSizeChange = 1;
     }
@@ -9,38 +10,85 @@ $( window ).resize(function() {
     updateMenuItems();
 });
 
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 0){
+        scrollState = 1;
+    }
+    else{
+        scrollState = 0;
+    }
+    if(menuState == 1){
+        var imgs=$('.menuIcon');
+        var shift_cur = 0;
+        imgs.each(function() {
+            var height = $(this).height();
+            shift_cur += 60;
+            var yshift = shift_cur;
+            if(scrollState == 0){
+                $(this).css({
+                    'top': '53%'
+                })
+            }
+            else{
+                $(this).css({
+                    'top': '33%'
+                })
+            }
+            var top = $(this).position().top + yshift;
+            $(this).css({
+                'top': top - height/4
+            })
+        });
+    }
+});
+
 function updateMenuItems() {
     console.log("MENU BUTTON CLICKED");
     if (menuState == 0) {
+        //Reveal the menu
         menuState = 2;
         var imgs=$('.menuIcon');
-        var angle=(360/imgs.size())*(3.14/180);
-        var cur_angle=(3.14/180)*180-angle;
+        var menucontainer = $('#menucontainer')
+        menucontainer.css({
+            'display': 'block'
+        })
+        menucontainer.animate({
+            height: (imgs.length+1)*64
+        })
+        var shift_cur = 0;
         imgs.each(function(){
-            $(this).css({
-                'display': 'block',
-                'top': '73%',
-                'left': '51%'
-            })
+            if(scrollState == 0){
+                $(this).css({
+                    'display': 'block',
+                    'top': '53%',
+                    'left': '30px'
+                })
+            }
+            else{
+                $(this).css({
+                    'display': 'block',
+                    'top': '33%',
+                    'left': '30px'
+                })
+            }
             var height = $(this).height();
             var width = $(this).width();
-            var xshift = 100*Math.sin(cur_angle);
-            var yshift = 100*Math.cos(cur_angle);
-            var left = $(this).position().left + xshift;
+            shift_cur += 60;
+            var yshift = shift_cur;
             var top = $(this).position().top + yshift;
-            console.log(cur_angle,xshift,yshift);
+            var left = $(this).position().left;
             $(this).animate({
-                left: left - height/2,
                 top: top - height/2,
+                left: left - width/2,                
                 height: 2*height
             })
-            cur_angle += angle;
         });
         setTimeout(function (){
             menuState = 1;
         },400);
     }
     else if (menuState == 1) {
+        //Hide the menu
         menuState = 2;
         var multiplier = 1;
         if(noSizeChange){
@@ -48,22 +96,23 @@ function updateMenuItems() {
             multiplier = 2;
         }
         var imgs=$('.menuIcon');
-        var angle=(360/imgs.size())*(3.14/180);
-        var cur_angle=(3.14/180)*180-angle;
+        var menucontainer = $('#menucontainer')
+        menucontainer.animate({
+            height: 64
+        })
+        var shift_cur = 0;
         imgs.each(function(){
             var height = $(this).height();
             var width = $(this).width();
-            var xshift = 100*Math.sin(cur_angle);
-            var yshift = 100*Math.cos(cur_angle);
-            var left = $(this).position().left - xshift;
+            shift_cur += 60;
+            var yshift = shift_cur;
             var top = $(this).position().top - yshift;
-            console.log(cur_angle,xshift,yshift);
+            var left = $(this).position().left;
             $(this).animate({
-                left: left + height/4,
                 top: top + height/4,
+                left: left + width/4,
                 height: (height)*(multiplier/2)
             })
-            cur_angle += angle;
         });
         setTimeout(function (){
             imgs.each(function(){
