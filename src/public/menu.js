@@ -3,43 +3,52 @@ var noSizeChange = 0;
 var scrollState = 0;
 
 $(window).resize(function() {
-    if(menuState == 0){
-        noSizeChange = 1;
+    //Hide the menu if it is currently visible
+    if(menuState == 1) {
+        updateMenuItems();
     }
-    menuState = 1;
-    updateMenuItems();
 });
 
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 0){
-        scrollState = 1;
+function hideMenuWithScroll() {
+    var menucontainer = $('#menucontainer')
+    if (scrollState == 0){
+        menucontainer.animate({
+            'height': 64,
+            'top': '40%'
+        }, { queue: false, duration: 200 })
     }
-    else{
-        scrollState = 0;
+    else {
+        menucontainer.animate({
+            'height': 64,
+            'top': '60%'
+        }, { queue: false, duration: 200 })   
     }
-    if(menuState == 1){
+    if (menuState == 1){
+        updateMenuItems();
         var imgs=$('.menuIcon');
-        var shift_cur = 0;
         imgs.each(function() {
-            var height = $(this).height();
-            shift_cur += 60;
-            var yshift = shift_cur;
-            if(scrollState == 0){
-                $(this).css({
-                    'top': '53%'
-                })
-            }
-            else{
-                $(this).css({
-                    'top': '33%'
-                })
-            }
-            var top = $(this).position().top + yshift;
             $(this).css({
-                'top': top - height/4
+                'display': 'none'
             })
         });
     }
+}
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 0){
+        if (scrollState == 0){
+            //Scroll state has just changed
+            hideMenuWithScroll();
+        }
+        scrollState = 1;
+    }
+    else{
+        if (scrollState == 1){
+            //Scroll state has just changed
+            hideMenuWithScroll();
+        }
+        scrollState = 0;
+    } 
 });
 
 function updateMenuItems() {
@@ -48,7 +57,7 @@ function updateMenuItems() {
         //Reveal the menu
         menuState = 2;
         var imgs=$('.menuIcon');
-        var menucontainer = $('#menucontainer')
+        var menucontainer = $('#menucontainer');
         menucontainer.css({
             'display': 'block'
         })

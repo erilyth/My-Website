@@ -17,9 +17,13 @@ body{
 	font-family: Choplin-ExtraLight;
 }
 
-/* This sticky class is added onto the header after scroll */
+/* This sticky class is added onto the subheading after scroll */
 .heading.sticky {
 	font-size: 1em;
+}
+
+/* This sticky class is added onto the subheading after scroll immediately */
+.heading.sticky2 {
 	position: fixed;
 	width: 100%;
 }
@@ -39,22 +43,26 @@ body{
 	display: none;
 }
 
+/* This sticky class is added onto the subheading contents after scroll */
 .subheadingcontent.sticky {
 	display: none;
 }
 
 .subheadingcontent {
 	display: inline-block;
+	font-size:3em;
+	padding-left:1em;
 }
 
 .subheading {
-	color: white;
 	padding: 2%;
 	background-color: #66b3ff;
 	text-align: center;
-	font-size: 4.5em;
 	font-family: FortuneCity;
 	text-shadow: 1px 1px 1px #aaaaaa;
+	margin-left:-14%;
+	font-size:1em;
+	color:#808080;
 }
 
 .boundary {
