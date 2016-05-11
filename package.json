@@ -21,7 +21,8 @@
     "request": "latest",
     "cheerio": "latest",
     "fs": "latest",
-    "path": "latest"
+    "path": "latest",
+    "scrollreveal": "latest"
   },
   "devDependencies": {
     "express": "^4.13.3",
@@ -34,7 +35,8 @@
     "request": "latest",
     "cheerio": "latest",
     "fs": "latest",
-    "path": "latest"
+    "path": "latest",
+    "scrollreveal": "latest"
   },
   "author": "Batchu Venkat Vishal",
   "license": "ISC"

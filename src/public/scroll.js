@@ -16,3 +16,13 @@ $(window).scroll(function() {
     	$('img.menuButton').removeClass("sticky", 200);
   	}
 });
+
+
+$(function () {
+  $('.cover').crossfade({
+  		start: 'Images/development.jpg',
+  		end: 'Images/developmentblur.jpg',
+  		backgroundPosition: 'center center',
+  		threshold: 0.2
+  });
+});

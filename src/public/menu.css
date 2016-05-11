@@ -2,11 +2,6 @@ body {
     background-color: #cce5ff;
 }
 
-div.content {
-  margin-left: 110px;
-  margin-top: 3%;
-}
-
 img.mainTitle {
     margin-left: auto;
     margin-right: auto;
@@ -23,6 +18,7 @@ img.mainTitle {
     margin-left: 8px;
     margin-top: -70px;
     box-shadow: 5px 3px 2px #455A64;
+    z-index: 2;
 }
 
 #menucontainer.sticky {
@@ -43,6 +39,7 @@ img.menuButton.sticky {
 img.menuIcon {
     position:fixed;
     top: 53%;
+    z-index: 2;
 }
 
 .changeText span {
