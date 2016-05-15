@@ -14,13 +14,13 @@ function hideMenuWithScroll() {
     if (scrollState == 0){
         menucontainer.animate({
             'height': 64,
-            'top': '40%'
+            'top': '30.5%'
         }, { queue: false, duration: 200 })
     }
     else {
         menucontainer.animate({
             'height': 64,
-            'top': '60%'
+            'top': '50.5%'
         }, { queue: false, duration: 200 })   
     }
     if (menuState == 1){

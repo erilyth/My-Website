@@ -11,12 +11,12 @@ img.mainTitle {
 #menucontainer {
     position: fixed;
     border-radius: 10px;
-    top: 60%;
-    background-color: #A8B7BF;
-    height: 64px;
+    top: 50%;
+    background-color: #A8B7BF; 
+    height: 70px;
     width: 70px;
-    margin-left: 8px;
-    margin-top: -70px;
+    margin-left: 9px;
+    margin-top: -5px;
     box-shadow: 5px 3px 2px #455A64;
     z-index: 2;
 }
