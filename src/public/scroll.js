@@ -20,8 +20,8 @@ $(window).scroll(function() {
 
 $(function () {
   $('.cover').crossfade({
-  		start: 'Images/development.jpg',
-  		end: 'Images/developmentblur.jpg',
+  		start: 'Images/development.png',
+  		end: 'Images/developmentblur.png',
   		backgroundPosition: 'center center',
   		threshold: 0.2
   });

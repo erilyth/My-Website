@@ -33,7 +33,7 @@ body{
 	padding: 2%;
 	background-color: #0073e6;
 	text-align: center;
-	font-size: 6em;
+	font-size: 5em;
 	font-family: Harabara;
 	text-shadow: 2px 2px 2px #555555;
 	z-index: 15;
@@ -51,7 +51,7 @@ body{
 
 .subheadingcontent {
 	display: inline-block;
-	font-size:3em;
+	font-size:2em;
 	padding-left:1em;
 }
 
@@ -61,7 +61,7 @@ body{
 	text-align: center;
 	font-family: FortuneCity;
 	text-shadow: 1px 1px 1px #aaaaaa;
-	margin-left:-14%;
+	margin-left:-8%;
 	font-size:1em;
 	color:#808080;
 }
