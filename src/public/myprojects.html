@@ -5,17 +5,35 @@
 		<title>My Projects</title>
 		<!-- jQuery library -->
 		<script src="jquery-1.11.3.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 		<!-- Bootstrap.css -->
 		<link rel="stylesheet" href="bootstrap.min.css">
 		<link rel="stylesheet" href="bootstrap-theme.min.css">
+		<!-- Custom stylesheets -->
+		<link rel="stylesheet" href="menu.css">
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
-		<div class="subheading">
-			<a href="index.html"><img src="Images/back.png" class="round-back-button"></a>
+		<div class="subheading subheadingL">
 			Projects
 		</div>
 		<div class="boundary"></div>
+		<div class="menuContainer" ng-controller="menuCtrl">
+			<img id="mainbutton" src="Images/menubutton.png" height="60px" class="menuButton" onclick="updateMenuItems()"/>
+			<div id="menucontainer"></div>
+			<a href="index.html">
+				<img src="Images/home.png" height="27px" class="menuIcon"/>
+			</a>
+			<a href="myprojects.html">
+				<img src="Images/projects.png" height="30px" class="menuIcon"/>
+			</a>
+			<a href="http://vishalbatchu.blog.com/">
+				<img src="Images/blog.png" height="30px" class="menuIcon"/>
+			</a>
+			<a href="instructables.html">
+				<img src="Images/instructables.png" height="22px" style="margin-left:4px; margin-top:6px;" class="menuIcon"/>
+			</a>
+		</div>
 		<div class="container" ng-controller="projectsCtrl">
 			<div ng-repeat="project in projectList" style="margin:4%;margin-left:5%;">
 				<projectdetail projectdetaildata="project"></projectdetail>
@@ -25,6 +43,8 @@
 		<script src="angular.min.js"></script>
 		<script src="directives/projectdetail.js"></script>
 		<script src="controllers/controller.js"></script>
+		<script src="menu.js"></script>
+		<script src="scroll.js"></script>
 	</body>
 </html>
 
