@@ -25,4 +25,17 @@ $(function () {
   		backgroundPosition: 'center center',
   		threshold: 0.2
   });
+  $('.contact').crossfade({
+      start: 'Images/home.png',
+      end: 'Images/home.png',
+      backgroundPosition: 'center center',
+      threshold: 0.2
+  });
+  $('.about').crossfade({
+      start: 'Images/projects.png',
+      end: 'Images/projects.png',
+      backgroundPosition: 'center center',
+      threshold: 0.2
+  });
 });
+
