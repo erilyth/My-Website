@@ -37,5 +37,11 @@ $(function () {
       backgroundPosition: 'center center',
       threshold: 0.2
   });
+  $('.boundaryDivider').crossfade({
+      start: 'Images/boundary.jpg',
+      end: 'Images/boundary.jpg',
+      backgroundPosition: 'center center',
+      threshold: 0.2
+  })
 });
 

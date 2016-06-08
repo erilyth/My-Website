@@ -83,6 +83,12 @@ body{
 	z-index: -10;
 }
 
+.boundaryDivider {
+	position: relative;
+	width: 100%;
+	z-index: -10;
+}
+
 .contact {
 	position: relative;
 	width: 100%;
