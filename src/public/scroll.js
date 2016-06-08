@@ -26,14 +26,14 @@ $(function () {
   		threshold: 0.2
   });
   $('.contact').crossfade({
-      start: 'Images/contact.png',
-      end: 'Images/contact.png',
+      start: 'Images/background.png',
+      end: 'Images/background.png',
       backgroundPosition: 'center center',
       threshold: 0.2
   });
   $('.about').crossfade({
-      start: 'Images/emptybackground.png',
-      end: 'Images/emptybackground.png',
+      start: 'Images/background.png',
+      end: 'Images/background.png',
       backgroundPosition: 'center center',
       threshold: 0.2
   });
