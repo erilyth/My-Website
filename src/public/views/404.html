@@ -1,3 +1,47 @@
+<!DOCTYPE html>
 <html>
-	404 Page not found
+	<head>
+		<meta charset="utf-8" />
+		<title>404 Page not found</title>
+		<style>
+			@font-face {
+			    font-family: FortuneCity;
+			    src: url(fonts/FortuneCity.ttf);
+			}
+			h1.main_message {
+				text-align: center;
+				margin-top: 46vh;
+				font-size: 2.5em;
+				font-family: FortuneCity;
+				font-weight: lighter;
+				color: white;
+			}
+			p.go_back {
+				text-align: center;
+				font-family: FortuneCity;
+				background-color: #0073E6;
+				padding: 10px;
+				font-size: 1.5em;
+				font-weight: lighter;
+			}
+			p.error_message {
+				text-align: center;
+				margin-top: 28vh;
+				font-size: 0.8em;
+				font-family: "Courier New", Courier, monospace;
+			}
+			a {
+				text-decoration: none;
+				color: white;
+			}
+			html {
+				background-color: #66B3FF;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="main_message">You seem to have lost your way ...</h1>
+		<a href="index.html"><p class="go_back">Lets get you home</p></a>
+		<p class="error_message">(404 Page Not Found)</p>
+	</body>
 </html>
