@@ -21,16 +21,16 @@
 		<div class="menuContainer" ng-controller="menuCtrl">
 			<img id="mainbutton" src="Images/menubutton.png" height="60px" class="menuButton" onclick="updateMenuItems()"/>
 			<div id="menucontainer"></div>
-			<a href="index.html">
+			<a href="index.html" title="Home">
 				<img src="Images/home.png" height="27px" class="menuIcon"/>
 			</a>
-			<a href="myprojects.html">
+			<a href="myprojects.html" title="Projects">
 				<img src="Images/projects.png" height="30px" class="menuIcon"/>
 			</a>
-			<a href="http://vishalbatchu.blog.com/">
+			<a href="http://vishalbatchu.blog.com/" title="Blog">
 				<img src="Images/blog.png" height="30px" class="menuIcon"/>
 			</a>
-			<a href="instructables.html">
+			<a href="instructables.html" title="Instructables">
 				<img src="Images/instructables.png" height="22px" style="margin-left:4px; margin-top:6px;" class="menuIcon"/>
 			</a>
 		</div>
@@ -41,6 +41,7 @@
 		</div>
 		<!-- AngularJS library -->
 		<script src="angular.min.js"></script>
+		<script src="crossfade.js"></script>
 		<script src="directives/project.js"></script>
 		<script src="controllers/controller.js"></script>
 		<script src="menu.js"></script>
