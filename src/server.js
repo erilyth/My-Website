@@ -13,6 +13,7 @@ var fs = require('fs');
 var path = require('path');
 
 app.use(express.static(__dirname+"/public"));
+app.set('view engine', 'jade');
 
 //Read projects from the projects directory
 app.get('/myprojects', function(req, res){
@@ -90,6 +91,11 @@ app.get('/instructables', function(req, res){
   		}
 	});
 });
+
+app.get('*', function(req, res){
+  res.status(404).render(__dirname+"/public/views/404");
+});
+
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';

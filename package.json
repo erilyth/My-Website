@@ -22,6 +22,7 @@
     "request": "latest",
     "cheerio": "latest",
     "fs": "latest",
+    "jade": "latest",
     "path": "latest",
     "scrollreveal": "latest"
   },
@@ -36,6 +37,7 @@
     "request": "latest",
     "cheerio": "latest",
     "fs": "latest",
+    "jade": "latest",
     "path": "latest",
     "scrollreveal": "latest"
   },
