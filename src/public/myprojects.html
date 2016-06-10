@@ -9,9 +9,16 @@
 		<!-- Bootstrap.css -->
 		<link rel="stylesheet" href="bootstrap.min.css">
 		<link rel="stylesheet" href="bootstrap-theme.min.css">
+		<!-- magic.css animation library -->
+		<link rel="stylesheet" href="magic.min.css">
 		<!-- Custom stylesheets -->
 		<link rel="stylesheet" href="menu.css">
 		<link rel="stylesheet" href="main.css">
+		<!-- Wow.js for scroll animations on animate.css -->
+        <script src="wow.min.js"></script>
+        <script>
+        	new WOW({offset: 400}).init();
+        </script>
 	</head>
 	<body>
 		<div class="subheading subheadingL">
@@ -36,7 +43,7 @@
 		</div>
 		<div class="container" ng-controller="projectsCtrl">
 			<div ng-repeat="project in projectList" style="margin:4%;margin-left:5%;">
-				<projectdetail projectdetaildata="project"></projectdetail>
+				<projectdetail projectdetaildata="project" class="wow magictime spaceInLeft" data-wow-offset="200"></projectdetail>
 			</div>
 		</div>
 		<!-- AngularJS library -->
