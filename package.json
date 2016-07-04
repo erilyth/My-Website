@@ -27,18 +27,19 @@
     "scrollreveal": "latest"
   },
   "devDependencies": {
+    "cheerio": "latest",
     "express": "^4.13.3",
+    "fs": "latest",
     "gulp": "^3.9.0",
     "gulp-jasmine": "^2.2.1",
     "gulp-jasmine-browser": "^0.2.3",
     "gulp-notify": "^2.2.0",
     "gulp-watch": "^4.3.5",
-    "phantomjs": "^1.9.18",
-    "request": "latest",
-    "cheerio": "latest",
-    "fs": "latest",
+    "helmet": "^2.1.1",
     "jade": "latest",
     "path": "latest",
+    "phantomjs": "^1.9.18",
+    "request": "latest",
     "scrollreveal": "latest"
   },
   "author": "Batchu Venkat Vishal",

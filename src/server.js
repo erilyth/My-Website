@@ -6,6 +6,7 @@
  */
 
 var express = require('express');
+var helmet = require('helmet')
 var app = express();
 var request = require('request');
 var cheerio = require('cheerio');
@@ -14,6 +15,9 @@ var path = require('path');
 
 app.use(express.static(__dirname+"/public"));
 app.set('view engine', 'jade');
+
+//Security issues are dealt by helmet
+app.use(helmet());
 
 //Read projects from the projects directory
 app.get('/myprojects', function(req, res){
