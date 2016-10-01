@@ -2,6 +2,8 @@
 
 A website entirely about me!
 
+Development build for http://erilyth.github.io/
+
 This website serves the purpose of letting the world know a little more about **me** and what I like to do.
 
 * * * * *
