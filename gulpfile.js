@@ -9,6 +9,7 @@
 var gulp = require('gulp');
 var jasmineBrowser = require('gulp-jasmine-browser');
 var notify = require('gulp-notify');
+var sass = require('gulp-sass');
 
 gulp.task('jasmine', function() {
 	return gulp.src(['src/**/*.js','spec/**/*_spec.js'])
@@ -30,4 +31,12 @@ gulp.task('jasmine-phantom', function() {
 	return gulp.src(['src/**/*.js', 'spec/**/*_spec.js'])
 		.pipe(jasmineBrowser.specRunner({console: true}))
 		.pipe(jasmineBrowser.headless());
+});
+
+// Compile SCSS
+gulp.task('scss', function(){
+	return gulp.src('src/public/scss/**/*.scss')
+    .pipe(watch('src/public/scss/**/*.scss'))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('src/public/'));
 });
