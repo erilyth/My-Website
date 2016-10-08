@@ -1,0 +1,8 @@
+Soccer Player Segmentation (Matlab)
+%$
+https://github.com/erilyth/Soccer-Player-Segmentation
+%$
+https://s18.postimg.org/xplr8dwrt/out_soccer_2.png
+%$
+Given an image of an aerial view of a soccer field, it identifies and draws borders around all the players present. This could be further used to track players across frames in a video and distinguish players of each team which would be analysed to understand the strategies involved with player movement in soccer games.
+Developed using the Matlab

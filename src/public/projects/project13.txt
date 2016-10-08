@@ -1,0 +1,8 @@
+Window Detection (Matlab)
+%$
+https://github.com/erilyth/Window-Detection
+%$
+https://s11.postimg.org/lkkunqrb7/out_building_4.jpg
+%$
+Given an image of a building facade, it identifies and draws borders around all the windows present. This is useful as based on detection of windows we can predict if what we are seeing is a building or something similar. This could be used by automatic navigation agents to detect their paths and reach a destination.
+Developed using the Matlab

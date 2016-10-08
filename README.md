@@ -15,8 +15,8 @@ So, first things first
 * Clone the repo
 * Make sure you have npm installed on your machine
 * Go to the cloned folder and run, `npm install`
-* Now run, `npm run`
-* To start the server go to the src directory and run `node server.js`
+* Use `npm sass` to compile .sass into .css
+* To start the server use, `npm start`
 * Open a browser and go to localhost:8080, the website should now be up and running.
 
 If you are behind a proxy do not forget to put proxy settings for npm.
