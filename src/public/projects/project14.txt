@@ -1,0 +1,7 @@
+Hadoop Distributed File System - Implementation (Java)
+%$
+https://github.com/erilyth/HDFS
+%$
+https://s21.postimg.org/eh4kkigd3/Create_File.png
+%$
+An implementation of the famous HDFS in Java. The basic structure is the same with a client, name node and multiple data nodes that are used to store data in a reliable and horizontally scalable manner. Data that needs to be stored is broken into blocks of a certain size and are stored at multiple locations (systems). To retrieve the data all these systems are queried and the blocks are stiched back together to get the original file back.

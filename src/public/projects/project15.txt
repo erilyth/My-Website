@@ -1,0 +1,7 @@
+Neural Style Transfer (Torch - Lua)
+%$
+https://github.com/Achilles-96/Team3-StyleTransfer
+%$
+https://s22.postimg.org/bi4a8lkkx/Screenshot_from_2016_11_06_07_18_35.png
+%$
+Style transfer takes two images (a style image and a content image) as inputs and creates a new image which captures the texture and the color of the style image and the edges and finer details of the content image. This is performed using deep convolutional networks.
